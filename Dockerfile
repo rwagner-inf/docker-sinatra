@@ -15,7 +15,7 @@ RUN cd /root/src/ruby-2.2.2; ./configure; make install
 RUN gem update --system
 RUN gem install bundler
 
-bundle install
+RUN bundle install
 
 EXPOSE 4567
 CMD ["/usr/local/bin/foreman","start","-d","/root/sinatra"]
